@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".RegisterActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/login" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_circle"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="#bdc3c7"
+        android:textColorHint="#bdc3c7"
+        android:paddingBottom="10dp"
+        android:hint="Name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittext_circle"
+        android:paddingLeft="20dp"
+        android:textColor="#bdc3c7"
+        android:textColorHint="#bdc3c7"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:hint="Email"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_circle"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:textColor="#bdc3c7"
+        android:textColorHint="#bdc3c7"
+        android:paddingBottom="10dp"
+        android:layout_margin="20dp"
+        android:hint="Password"/>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_circle"
+        android:layout_margin="20dp"
+        android:text="Register"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/login_button"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I have account"
+        android:textColor="#3498db"/>
+
+</LinearLayout>
