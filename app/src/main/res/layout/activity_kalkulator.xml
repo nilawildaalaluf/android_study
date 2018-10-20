@@ -28,15 +28,15 @@
         android:layout_gravity="center"
         android:background="#2980b9"
         android:textColor="#fff"/>
-    <TextView
-        android:id="@+id/text_hasil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#a4a4a4"
-        android:padding="10dp"
-        android:text="Hasil : "
-    />
+    <!--<TextView-->
+        <!--android:id="@+id/text_hasil"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textColor="#a4a4a4"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="Hasil : "-->
+    <!--/>-->
 
 
 

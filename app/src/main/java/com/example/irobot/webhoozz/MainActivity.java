@@ -1,7 +1,9 @@
 package com.example.irobot.webhoozz;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
@@ -16,6 +18,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private LinearLayout layout1, layout2, layout3, layout4;
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    SharedPreferences preferences;
+    String nim;
 
 
     @Override
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         layout4 = (LinearLayout) findViewById(R.id.layoutDialog);
 
         actionClick();
+
+        preferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+        nim = preferences.getString("email", null);
 
 
 
@@ -71,7 +78,15 @@ public class MainActivity extends AppCompatActivity {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface arg0, int arg1) {
-                                    Toast.makeText(MainActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
+                                    SharedPreferences.Editor editor = preferences.edit();
+                                    editor.clear();
+                                    editor.commit();
+
+                                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+                                    Toast.makeText(MainActivity.this,"Logout success",Toast.LENGTH_LONG).show();
+                                    finish();
+
                                 }
                             });
 
